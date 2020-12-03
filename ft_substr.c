@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 18:16:45 by faherrau          #+#    #+#             */
-/*   Updated: 2020/12/01 20:38:07 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2020/12/03 23:02:16 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char			*ft_substr(const char *s, unsigned int start, size_t len)
 	if (!s)
 		return (0);
 	if (start >= ft_strlen(s))
-		start = ft_strlen(s);
+		return ((char *)ft_calloc(1, '1'));
 	if (!(tab = malloc((len + 1) * sizeof(char))))
 	{
 		errno = ENOMEM;
