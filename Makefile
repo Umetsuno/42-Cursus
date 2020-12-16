@@ -6,59 +6,61 @@
 #    By: faherrau <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 18:15:37 by faherrau          #+#    #+#              #
-#    Updated: 2020/12/03 13:57:43 by faherrau         ###   ########lyon.fr    #
+#    Updated: 2020/12/16 19:14:02 by faherrau         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
+
+./caracter
+
 
 NAME		=	libft.a
 
 INCLUDES    =	-I ./
-SRCS        = 	ft_memset.c \
-				ft_bzero.c \
-				ft_memcpy.c \
-				ft_memccpy.c \
-				ft_memmove.c \
-				ft_memchr.c \
-				ft_memcmp.c \
-				ft_strlen.c \
-				ft_isalpha.c \
-				ft_isdigit.c \
-				ft_isalnum.c \
-				ft_isascii.c \
-				ft_isprint.c \
-				ft_toupper.c \
-				ft_tolower.c \
-				ft_strchr.c \
-				ft_strrchr.c \
-				ft_strncmp.c \
-				ft_strlcpy.c \
-				ft_strlcat.c \
-				ft_strnstr.c \
-				ft_atoi.c \
-				ft_calloc.c \
-				ft_strdup.c \
-				ft_substr.c \
-				ft_strjoin.c \
-				ft_strtrim.c \
-				ft_split.c \
-				ft_itoa.c \
-				ft_strmapi.c \
-				ft_putchar_fd.c \
-				ft_putstr_fd.c \
-				ft_putendl_fd.c \
-				ft_putnbr_fd.c
+SRCS        = 	./memory_manip/ft_bzero.c \
+				./memory_manip/ft_memset.c \
+				./memory_manip/ft_memcpy.c \
+				./memory_manip/ft_memccpy.c \
+				./memory_manip/ft_memmove.c \
+				./memory_manip/ft_memchr.c \
+				./memory_manip/ft_memcmp.c \
+				./memory_manip/ft_calloc.c \
+				./checks/ft_isalpha.c \
+				./checks/ft_isdigit.c \
+				./checks/ft_isalnum.c \
+				./checks/ft_isascii.c \
+				./checks/ft_isprint.c \
+				./char_manip/ft_toupper.c \
+				./char_manip/ft_tolower.c \
+				./converters/ft_atoi.c \
+				./converters/ft_itoa.c \
+				./string_manip/ft_strlen.c \
+				./string_manip/ft_strchr.c \
+				./string_manip/ft_strrchr.c \
+				./string_manip/ft_strncmp.c \
+				./string_manip/ft_strlcpy.c \
+				./string_manip/ft_strlcat.c \
+				./string_manip/ft_strnstr.c \
+				./string_manip/ft_strdup.c \
+				./string_manip/ft_substr.c \
+				./string_manip/ft_strjoin.c \
+				./string_manip/ft_strtrim.c \
+				./string_manip/ft_split.c \
+				./string_manip/ft_strmapi.c \
+				./file_manip/ft_putchar_fd.c \
+				./file_manip/ft_putstr_fd.c \
+				./file_manip/ft_putendl_fd.c \
+				./file_manip/ft_putnbr_fd.c \
+				./lists_manip/ft_lstnew.c \
+				./lists_manip/ft_lstadd_front.c \
+				./lists_manip/ft_lstsize.c \
+				./lists_manip/ft_lstlast.c \
+				./lists_manip/ft_lstadd_back.c \
+				./lists_manip/ft_lstdelone.c \
+				./lists_manip/ft_lstclear.c \
+				./lists_manip/ft_lstiter.c \
+				./lists_manip/ft_lstmap.c
+				
 OBJS        =	$(SRCS:.c=.o)
-
-BONUS_SRCS	=	ft_lstnew.c \
-				ft_lstadd_front.c \
-				ft_lstsize.c \
-				ft_lstlast.c \
-				ft_lstadd_back.c \
-				ft_lstdelone.c \
-				ft_lstclear.c \
-				ft_lstiter.c \
-				ft_lstmap.c
-BONUS_OBJS	=	$(BONUS_SRCS:.c=.o)
 
 GCC			=	gcc
 FLAGS		=	-Wall -Wextra -Werror
@@ -71,9 +73,6 @@ $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
 all:	$(NAME) clean
-
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)
