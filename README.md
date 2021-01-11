@@ -2,7 +2,7 @@
 
 FUNCTIONS IN :  
 
-## CHECKERS
+## [color=#26B260]CHECKERS[/color]
 
 int					ft_isprint(int c):  
 int					ft_isascii(int c):  
