@@ -10,14 +10,14 @@ int					ft_isdigit(int c):
 int					ft_isalpha(int c):  
 int					ft_isalnum(int c):  
 
-## <span style="color: #9966CC">FILES
+## <span style="color: peru">FILES
 
 void				ft_putchar_fd(char c, int fd):  
 void				ft_putstr_fd(char *s, int fd):  
 void				ft_putendl_fd(char *s, int fd):  
 void				ft_putnbr_fd(int n, int fd):  
 
-## <span style="color: #9966CC">STRINGS
+## <span style="color: peru">STRINGS
 
 size_t				ft_strlen(const char *s);  
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize):  
@@ -34,17 +34,17 @@ char				*ft_strtrim(char const *s1, const char *set):
 char				**ft_split(char const *s, char c):  
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char)):  
 
-## <span style="color: #9966CC">CONVERSIONS
+## <span style="color: peru">CONVERSIONS
 
 int					ft_atoi(const char *str):  
 char				*ft_itoa(int n):  
 
-## <span style="color: #9966CC">CHARACTERS
+## <span style="color: peru">CHARACTERS
 
 int					ft_tolower(int c):  
 int					ft_toupper(int c):  
 
-## <span style="color: #9966CC">MEMORY
+## <span style="color: peru">MEMORY
 
 int					ft_memcmp(const void *s1, const void *s2, size_t n):  
 void				*ft_memset(void *b, int c, size_t len):  
@@ -55,7 +55,7 @@ void				*ft_memchr(const void *s, int c, size_t n):
 void				*ft_calloc(size_t count, size_t size):  
 void				ft_bzero(void *s, size_t n):  
 
-## <span style="color: #9966CC">LISTS
+## <span style="color: peru">LISTS
 
 		typedef struct		s_list  
 		{  
@@ -74,7 +74,7 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *)):
 void				ft_lstclear(t_list **lst, void (*del)(void *)):  
 void				ft_lstiter(t_list *lst, void (*f)(void *)):  
 
-## <span style="color: #9966CC">MATHS
+## <span style="color: peru">MATHS
 
 unsigned long long	absolute_llvalue(long long number):  
 int 				min(int a, int b, int c):  
