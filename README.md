@@ -4,18 +4,18 @@ FUNCTIONS IN :
 
 ## <span style="color: peru">CHECKERS</color>
 
-int					ft_isprint(int c):  
-int					ft_isascii(int c):  
-int					ft_isdigit(int c):  
-int					ft_isalpha(int c):  
-int					ft_isalnum(int c):  
+ft_isprint() :	returns 1 if the character is printable, otherway returns 0.  
+ft_isascii() : returns 1 if the character is part of the ascii table, otherway returns 0.  
+ft_isdigit() : returns 1 if the character is a digit, otherway returns 0.  
+ft_isalpha() : returns 1 if the character is alphabetical, otherway returns 0.  
+ft_isalnum() : returns 1 if the character is either alphabetical or digital, otherway returns 0.  
 
 ## <span style="color: peru">FILES
 
-void				ft_putchar_fd(char c, int fd):  
-void				ft_putstr_fd(char *s, int fd):  
-void				ft_putendl_fd(char *s, int fd):  
-void				ft_putnbr_fd(int n, int fd):  
+ft_putchar_fd(char c, int fd) : print a character via a given file descriptor.  
+ft_putstr_fd(char *s, int fd) : print a string via a given file descriptor.  
+ft_putendl_fd(char *s, int fd) : print a string followed by a \n via a file descriptor.  
+ft_putnbr_fd(int n, int fd) : print a number via a given file descriptor.  
 
 ## <span style="color: peru">STRINGS
 
