@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 17:47:32 by faherrau          #+#    #+#             */
-/*   Updated: 2021/01/13 17:49:56 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/19 13:07:19 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,24 +44,24 @@ size_t	ft_strcpy(char *dst, const char *src)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*append;
-	int		append_size;
+	char	*concat;
+	int		concat_size;
 
 	if (!s1 && !s2)
 		return (0);
-	append_size = ft_strlen(s1) + ft_strlen(s2) + 1;
-	if (!(append = malloc(append_size * sizeof(char))))
+	concat_size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	if (!(concat = malloc(concat_size * sizeof(char))))
 	{
 		free((void *)s1);
 		return (0);
 	}
-	ft_strcpy(append, s1);
-	ft_strcpy(&append[ft_strlen(s1)], s2);
+	ft_strcpy(concat, s1);
+	ft_strcpy(&concat[ft_strlen(s1)], s2);
 	free((void *)s1);
-	return (append);
+	return (concat);
 }
 
-int		contains_nl(char *str)
+int		contains(char *str, char c)
 {
 	size_t	i;
 
@@ -70,7 +70,7 @@ int		contains_nl(char *str)
 		return (0);
 	while (str[i])
 	{
-		if (str[i] == '\n')
+		if (str[i] == c)
 			return (1);
 		i++;
 	}

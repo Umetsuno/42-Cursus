@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_absolute_llvalue.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 14:40:57 by faherrau          #+#    #+#             */
-/*   Updated: 2021/01/11 17:09:52 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/18 14:03:24 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ unsigned long long	absolute_llvalue(long long number)
 	else if (number < 0)
 		return (-number);
 	else
-		return (number);	
+		return (number);
 }

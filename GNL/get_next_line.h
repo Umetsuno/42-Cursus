@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 17:35:23 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/13 17:51:57 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/18 14:06:05 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int		get_next_line(int fd, char **line);
 size_t	ft_strlen(const char *s);
 size_t	ft_strcpy(char *dst, const char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
-int		contains_nl(char *str);
+int		contains(char *str, char c);
 
 #endif

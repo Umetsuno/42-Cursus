@@ -6,13 +6,13 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/13 18:00:38 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/18 17:52:27 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-char	*get_first_line_part(char *str)
+char	*get_first_line(char *str)
 {
 	char	*result;
 	size_t	i;
@@ -34,7 +34,7 @@ char	*get_first_line_part(char *str)
 	return (result);
 }
 
-char	*get_second_line_part(char *str)
+char	*get_second_line(char *str)
 {
 	char	*result;
 	size_t	i;
@@ -70,20 +70,21 @@ int		get_next_line(int fd, char **line)
 	|| BUFFER_SIZE < 1 || read(fd, 0, 0) == -1)
 		return (-1);
 	read_result = 1;
-	while (!contains_nl(backup[fd]) && read_result != 0)
+	while (!contains(backup[fd], '\n') && read_result != 0)
 	{
 		if ((read_result = read(fd, &buffer, BUFFER_SIZE)) == -1)
 			return (-1);
 		buffer[read_result] = '\0';
-		backup[fd] = ft_strjoin(backup[fd], buffer);
+		if (!(backup[fd] = ft_strjoin(backup[fd], buffer)))
+			return (-1);
 	}
-	*line = get_first_line_part(backup[fd]);
+	if (!(*line = get_first_line(backup[fd])))
+		return (-1);
 	if (read_result == 0)
 	{
 		free(backup[fd]);
 		backup[fd] = 0;
 		return (0);
 	}
-	backup[fd] = get_second_line_part(backup[fd]);
-	return (1);
+	return ((backup[fd] = get_second_line(backup[fd])) != 0 ? 1 : -1);
 }

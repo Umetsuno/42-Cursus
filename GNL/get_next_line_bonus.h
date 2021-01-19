@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:26 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/13 17:52:14 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/18 17:20:58 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@
 */
 
 int		get_next_line(int fd, char **line);
+int		read_next(char *backup, int read_result, int fd);
+char	*get_second_line(char *str);
+char	*get_first_line(char *str);
 
 /*
 **			GET_NEXT_LINE_UTILS.C CONTENT
@@ -34,6 +37,6 @@ int		get_next_line(int fd, char **line);
 size_t	ft_strlen(const char *s);
 size_t	ft_strcpy(char *dst, const char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
-int		contains_nl(char *str);
+int		contains(char *str, char c);
 
 #endif
