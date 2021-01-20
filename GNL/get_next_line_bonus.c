@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/18 17:52:27 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/20 17:50:41 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ char	*get_first_line(char *str)
 	size_t	i;
 
 	if (!str)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (str[i] && str[i] != '\n')
 		i++;
 	if (!(result = malloc((i + 1) * sizeof(char))))
-		return (0);
+		return (NULL);
 	i = 0;
 	while (str[i] && str[i] != '\n')
 	{
@@ -37,26 +37,15 @@ char	*get_first_line(char *str)
 char	*get_second_line(char *str)
 {
 	char	*result;
-	size_t	i;
-	size_t	j;
 
 	if (!str)
 		return (0);
-	i = 0;
-	while (str[i] && str[i] != '\n')
-		i++;
-	i++;
-	if (!(result = malloc((ft_strlen(str) - i + 1) * sizeof(char))))
-		return (0);
-	j = 0;
-	while (str[i + j])
-	{
-		result[j] = str[i + j];
-		j++;
-	}
-	result[j] = '\0';
+	ft_strcpy(str, &str[contains(str, '\n') + 1]);
+	if (!(result = malloc((ft_strlen(str) + 1) * sizeof(char))))
+		return (str);
+	ft_strcpy(result, str);
 	free(str);
-	str = 0;
+	str = NULL;
 	return (result);
 }
 
@@ -70,7 +59,7 @@ int		get_next_line(int fd, char **line)
 	|| BUFFER_SIZE < 1 || read(fd, 0, 0) == -1)
 		return (-1);
 	read_result = 1;
-	while (!contains(backup[fd], '\n') && read_result != 0)
+	while (contains(backup[fd], '\n') == -1 && read_result != 0)
 	{
 		if ((read_result = read(fd, &buffer, BUFFER_SIZE)) == -1)
 			return (-1);
@@ -83,8 +72,8 @@ int		get_next_line(int fd, char **line)
 	if (read_result == 0)
 	{
 		free(backup[fd]);
-		backup[fd] = 0;
+		backup[fd] = NULL;
 		return (0);
 	}
-	return ((backup[fd] = get_second_line(backup[fd])) != 0 ? 1 : -1);
+	return ((backup[fd] = get_second_line(backup[fd])) != 0 ? 1 : 1);
 }

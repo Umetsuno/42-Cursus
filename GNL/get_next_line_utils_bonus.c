@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 17:47:32 by faherrau          #+#    #+#             */
-/*   Updated: 2021/01/19 13:07:19 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/20 17:52:33 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		concat_size;
 
 	if (!s1 && !s2)
-		return (0);
+		return (NULL);
 	concat_size = ft_strlen(s1) + ft_strlen(s2) + 1;
 	if (!(concat = malloc(concat_size * sizeof(char))))
 	{
 		free((void *)s1);
-		return (0);
+		return (NULL);
 	}
 	ft_strcpy(concat, s1);
 	ft_strcpy(&concat[ft_strlen(s1)], s2);
@@ -65,14 +65,14 @@ int		contains(char *str, char c)
 {
 	size_t	i;
 
-	i = 0;
 	if (!str)
-		return (0);
+		return (-1);
+	i = 0;
 	while (str[i])
 	{
 		if (str[i] == c)
-			return (1);
+			return (i);
 		i++;
 	}
-	return (0);
+	return (-1);
 }
