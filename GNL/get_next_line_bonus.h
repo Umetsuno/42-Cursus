@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:26 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/19 15:12:54 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/21 16:46:24 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
-# include <errno.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 32
@@ -27,9 +26,6 @@
 */
 
 int		get_next_line(int fd, char **line);
-int		read_next(char *backup, int read_result, int fd);
-char	*get_second_line(char *str);
-char	*get_first_line(char *str);
 
 /*
 **			GET_NEXT_LINE_UTILS.C CONTENT

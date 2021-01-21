@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/21 16:21:37 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/21 16:40:25 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,11 @@ int		get_next_line(int fd, char **line)
 	char		buffer[BUFFER_SIZE + 1];
 	int			read_result;
 
-	if ((*line = NULL) || fd < 0 || fd >= OPEN_MAX || !line
-	|| BUFFER_SIZE < 1 || read(fd, 0, 0) == -1)
+	if ((*line = NULL) || fd < 0 || fd >= OPEN_MAX || !line 	\
+			|| BUFFER_SIZE < 1 || read(fd, 0, 0) == -1)
 		return (-1);
 	read_result = 1;
-	while (contains(backup[fd], '\n') == -1 && read_result != 0)
+	while (contains(backup[fd], '\n') == -1 && read_result)
 	{
 		if ((read_result = read(fd, &buffer, BUFFER_SIZE)) == -1)
 			return (-1);

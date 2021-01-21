@@ -6,13 +6,13 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/18 14:06:34 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/21 16:42:34 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char	*get_first_line(char *str)
+char	*get_first_line(char *str)
 {
 	char	*result;
 	size_t	i;
@@ -34,29 +34,18 @@ static char	*get_first_line(char *str)
 	return (result);
 }
 
-static char	*get_second_line(char *str)
+char	*get_second_line(char *str)
 {
 	char	*result;
-	size_t	i;
-	size_t	j;
 
 	if (!str)
 		return (0);
-	i = 0;
-	while (str[i] && str[i] != '\n')
-		i++;
-	i++;
-	if (!(result = malloc((ft_strlen(str) - i + 1) * sizeof(char))))
-		return (0);
-	j = 0;
-	while (str[i + j])
-	{
-		result[j] = str[i + j];
-		j++;
-	}
-	result[j] = '\0';
+	ft_strcpy(str, &str[contains(str, '\n') + 1]);
+	if (!(result = malloc((ft_strlen(str) + 1) * sizeof(char))))
+		return (str);
+	ft_strcpy(result, str);
 	free(str);
-	str = 0;
+	str = NULL;
 	return (result);
 }
 
@@ -66,22 +55,24 @@ int		get_next_line(int fd, char **line)
 	char		buffer[BUFFER_SIZE + 1];
 	int			read_result;
 
-	if (fd < 0 || !line || BUFFER_SIZE < 1 || read(fd, 0, 0) == -1)
+	if ((*line = NULL) || fd < 0 || !line || BUFFER_SIZE < 1 	\
+			|| read(fd, 0, 0) == -1)
 		return (-1);
 	read_result = 1;
-	while (!contains(backup, '\n') && read_result != 0)
+	while (contains(backup, '\n') == -1 && read_result)
 	{
 		if ((read_result = read(fd, &buffer, BUFFER_SIZE)) == -1)
 			return (-1);
 		buffer[read_result] = '\0';
-		backup = ft_strjoin(backup, buffer);
+		if (!(backup = ft_strjoin(backup, buffer)))
+			return (-1);
 	}
-	*line = get_first_line(backup);
+	if (!(*line = get_first_line(backup)))
+		return (-1);
 	if (read_result == 0)
 	{
 		free(backup);
-		backup = 0;
-		return (0);
+		return ((int)(backup = NULL));
 	}
 	backup = get_second_line(backup);
 	return (1);
