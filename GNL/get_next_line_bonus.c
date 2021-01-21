@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/20 17:50:41 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/21 16:21:37 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int		get_next_line(int fd, char **line)
 	char		buffer[BUFFER_SIZE + 1];
 	int			read_result;
 
-	if (fd < 0 || fd >= OPEN_MAX || !line
+	if ((*line = NULL) || fd < 0 || fd >= OPEN_MAX || !line
 	|| BUFFER_SIZE < 1 || read(fd, 0, 0) == -1)
 		return (-1);
 	read_result = 1;
@@ -72,8 +72,8 @@ int		get_next_line(int fd, char **line)
 	if (read_result == 0)
 	{
 		free(backup[fd]);
-		backup[fd] = NULL;
-		return (0);
+		return ((int)(backup[fd] = NULL));
 	}
-	return ((backup[fd] = get_second_line(backup[fd])) != 0 ? 1 : 1);
+	backup[fd] = get_second_line(backup[fd]);
+	return (1);
 }
