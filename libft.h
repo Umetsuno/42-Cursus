@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:26:17 by faherrau          #+#    #+#             */
-/*   Updated: 2021/01/11 17:18:02 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/01/30 08:34:17 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 */
 
 unsigned long long	absolute_llvalue(long long number);
-int 				min(int a, int b, int c);
+int					min(int a, int b, int c);
 int					ft_pgcd(int a, int b);
 
 #endif

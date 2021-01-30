@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   min.c                                              :+:      :+:    :+:   */
+/*   ft_min3.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/23 21:26:28 by faherrau          #+#    #+#             */
-/*   Updated: 2020/12/23 21:26:28 by faherrau         ###   ########lyon.fr   */
+/*   Created: 2021/01/30 08:33:14 by faherrau          #+#    #+#             */
+/*   Updated: 2021/01/30 08:33:16 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int min(int a, int b, int c)
-{	
-	if(a <= b && a <= c)
-		return a;
-	else if(b <= a && b <= c)
-		return b;
-	else if(c <= a && c <= b)
-		return c;
+int		min(int a, int b, int c)
+{
+	if (a <= b && a <= c)
+		return (a);
+	else if (b <= a && b <= c)
+		return (b);
+	else if (c <= a && c <= b)
+		return (c);
 }
