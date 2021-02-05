@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:26:17 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/05 08:43:26 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/05 09:14:58 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <errno.h>
 # include "libft_printf_checker.h"
 # include "libft_printf_parser.h"
-# include "libft_printf_printable.h"
+# include "libft_printf_formated.h"
 # include "libft_printf_processor.h"
 # include "libft_printf.h"
 
@@ -28,11 +28,11 @@
 **			MY_TYPES
 */
 
-typedef enum	e_bool
+typedef enum e_bool
 {
 	TRUE = 1,
 	FALSE = 0,
-}				t_bool;
+}			t_bool;
 
 /*
 **			CHECKERS
