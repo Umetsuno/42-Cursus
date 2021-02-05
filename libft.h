@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:26:17 by faherrau          #+#    #+#             */
-/*   Updated: 2021/01/30 08:34:17 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/05 08:32:14 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@
 # include <stdio.h>
 # include <string.h>
 # include <errno.h>
+
+/*
+**			MY_TYPES
+*/
+
+typedef enum	e_bool
+{
+	TRUE = 1,
+	FALSE = 0,
+}				t_bool;
 
 /*
 **			CHECKERS
