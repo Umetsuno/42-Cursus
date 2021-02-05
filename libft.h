@@ -6,7 +6,7 @@
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:26:17 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/05 08:32:14 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/05 08:43:26 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include <stdio.h>
 # include <string.h>
 # include <errno.h>
+# include "libft_printf_checker.h"
+# include "libft_printf_parser.h"
+# include "libft_printf_printable.h"
+# include "libft_printf_processor.h"
+# include "libft_printf.h"
 
 /*
 **			MY_TYPES

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft_printf_checker.h                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 07:48:15 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/04 07:48:16 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/05 08:44:49 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

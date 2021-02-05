@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_printable.c                                 :+:      :+:    :+:   */
+/*   printf_create_printable.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lduplain <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/11 13:53:30 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/13 15:33:00 by lduplain         ###   ########lyon.fr   */
+/*   Updated: 2021/02/05 08:39:11 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_printable	create_printable(
+t_formated	create_printable(
 	void)
 {
-	t_printable	printable;
+	t_formated	formated;
 
-	printable.type = 0;
-	printable.minus = FALSE;
-	printable.minus_value = 0;
-	printable.star = FALSE;
-	printable.star_value = 0;
-	printable.dot = FALSE;
-	printable.dot_value = 0;
-	printable.zero = FALSE;
-	printable.zero_value = 0;
-	return (printable);
+	formated.type = 0;
+	formated.minus = FALSE;
+	formated.minus_value = 0;
+	formated.star = FALSE;
+	formated.star_value = 0;
+	formated.dot = FALSE;
+	formated.dot_value = 0;
+	formated.zero = FALSE;
+	formated.zero_value = 0;
+	return (formated);
 }

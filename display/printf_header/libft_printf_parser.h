@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft_printf_parser.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 07:48:04 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/04 07:48:07 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/05 08:38:26 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	dot_parser(
 	const char *format,
 	int index,
 	va_list args,
-	t_printable *printable);
+	t_formated *formated);
 
 /*
 **	Parse star flag.
@@ -41,7 +41,7 @@ int	star_parser(
 	const char *format,
 	int index,
 	va_list args,
-	t_printable *printable);
+	t_formated *formated);
 
 /*
 **	Parse minus flag.
@@ -51,7 +51,7 @@ int	minus_parser(
 	const char *format,
 	size_t index,
 	va_list args,
-	t_printable *printable);
+	t_formated *formated);
 
 /*
 **	Parse zero flag.
@@ -61,6 +61,6 @@ int	zero_parser(
 	const char *format,
 	size_t index,
 	va_list args,
-	t_printable *printable);
+	t_formated *formated);
 
 #endif

@@ -3,29 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft_printf_printable.h                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 07:47:56 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/04 07:47:58 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/05 08:37:18 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_PRINTF_PRINTABLE_H
 # define LIBFT_PRINTF_PRINTABLE_H
 
-/*
-**	START CUSTOM INCLUDES
-*/
-
 # include "libft.h"
 
-/*
-**	END CUSTOM INCLUDES
-*/
-
-/*
-**	START DEFINES
-*/
 typedef struct	s_printable
 {
 	char	type;
@@ -37,26 +26,15 @@ typedef struct	s_printable
 	int		dot_value;
 	t_bool	zero;
 	int		zero_value;
-}				t_printable;
-/*
-**	END DEFINES
-*/
+}				t_formated;
 
-/*
-**	Create new printable structure filled with zeros and false booleans.
-**	./printf/printable/printf_create_printable.c
-*/
-t_printable		create_printable(
+t_formated		create_printable(
 	void);
 
-/*
-**	Fill printable structure prtbl with valid params contained in string format.
-**	./printf/printable/printf_parse_printable.c
-*/
 size_t			parse_printable(
 	const char *format,
 	size_t i,
-	t_printable *prtbl,
+	t_formated *formated,
 	va_list args);
 
 #endif
