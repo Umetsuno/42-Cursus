@@ -6,7 +6,7 @@
 /*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 07:47:39 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/04 07:47:50 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:17:00 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 */
 
 # include "libft.h"
-# include "libft_printf_printable.h"
+# include "libft_printf_formated.h"
 # include "libft_printf_processor.h"
 # include "libft_printf_checker.h"
 # include "libft_printf_parser.h"

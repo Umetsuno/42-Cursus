@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/21 16:40:25 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:22:18 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "libft.h"
+#define BUFFER_SIZE 32
 
 char	*get_first_line(char *str)
 {

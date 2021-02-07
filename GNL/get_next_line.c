@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by lduplain          #+#    #+#             */
-/*   Updated: 2021/01/21 16:42:34 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:20:41 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
+#define BUFFER_SIZE 32
 
 char	*get_first_line(char *str)
 {

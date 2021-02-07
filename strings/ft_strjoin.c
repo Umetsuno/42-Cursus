@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 19:22:26 by faherrau          #+#    #+#             */
-/*   Updated: 2020/12/01 16:40:05 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:25:19 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,21 @@ static char		*ft_strcpy(char *dest, char const *src)
 	return (dest);
 }
 
-char			*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*clone;
-	int		size;
+	char	*concat;
+	int		concat_size;
 
-	if (!s1 || !s2)
-		return (0);
-	size = ft_strlen(s1) + ft_strlen(s2) + 1;
-	if (!(clone = malloc(size * sizeof(char))))
+	if (!s1 && !s2)
+		return (NULL);
+	concat_size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	if (!(concat = malloc(concat_size * sizeof(char))))
 	{
-		errno = ENOMEM;
-		return (0);
+		free((void *)s1);
+		return (NULL);
 	}
-	ft_strcpy(clone, s1);
-	ft_strcpy(&clone[ft_strlen(s1)], s2);
-	return (clone);
+	ft_strcpy(concat, s1);
+	ft_strcpy(&concat[ft_strlen(s1)], s2);
+	free((void *)s1);
+	return (concat);
 }

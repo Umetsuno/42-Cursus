@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:26:17 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/05 09:14:58 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:17:28 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,6 @@
 # include <stdio.h>
 # include <string.h>
 # include <errno.h>
-# include "libft_printf_checker.h"
-# include "libft_printf_parser.h"
-# include "libft_printf_formated.h"
-# include "libft_printf_processor.h"
-# include "libft_printf.h"
 
 /*
 **			MY_TYPES
@@ -127,5 +122,15 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 unsigned long long	absolute_llvalue(long long number);
 int					min(int a, int b, int c);
 int					ft_pgcd(int a, int b);
+
+/*
+**			GNL
+*/
+
+int		get_next_line(int fd, char **line);
+int		contains(char *str, char c);
+size_t	ft_strlen(const char *s);
+size_t	ft_strcpy(char *dst, const char *src);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif

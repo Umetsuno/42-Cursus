@@ -6,7 +6,7 @@
 #    By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 18:15:37 by faherrau          #+#    #+#              #
-#    Updated: 2021/01/11 17:13:22 by faherrau         ###   ########lyon.fr    #
+#    Updated: 2021/02/07 20:28:45 by faherrau         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRCS        = 	./memory/ft_bzero.c \
 				./characters/ft_tolower.c \
 				./converters/ft_atoi.c \
 				./converters/ft_itoa.c \
+				./strings/contains.c \
 				./strings/ft_strlen.c \
 				./strings/ft_strchr.c \
 				./strings/ft_strrchr.c \
@@ -61,7 +62,9 @@ SRCS        = 	./memory/ft_bzero.c \
 				./lists/ft_lstmap.c \
 				./maths/ft_absolute_llvalue.c \
 				./maths/ft_min3.c \
-				./maths/ft_pgcd.c
+				./maths/ft_pgcd.c \
+				./GNL/get_next_line.c \
+				./GNL/get_next_line_bonus.c
 				
 OBJS        =	$(SRCS:.c=.o)
 
