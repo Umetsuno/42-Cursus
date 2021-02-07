@@ -6,7 +6,7 @@
 /*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 16:39:45 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 19:58:54 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:09:39 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ size_t	c_processor(t_formated *formated, va_list args, char **to_display);
 
 size_t	display(t_formated *formated, char **to_display);
 
-t_bool	convert_zeros_and_check_precision(t_formated *formated,
+t_bool	zeros_and_precision(t_formated *formated,
 	char **to_display, long value);
 
 /*
@@ -97,7 +97,7 @@ int	zero_parser(const char *format, size_t index, va_list args,
 
 t_formated		create_formated_str(void);
 
-size_t	parse_formated(const char *format, size_t i,
+size_t	parse_formated_str(const char *format, size_t i,
 		t_formated *formated, va_list args);
 
 
@@ -120,6 +120,10 @@ size_t	ft_strcpy(const char *source, char *destination);
 
 size_t	ft_strlen(const char *str);
 
+size_t	ft_putchar_fd(int fd, char c);
+
+size_t	ft_putchar(char c);
+
 char	*ft_strndup(const char *str, size_t n);
 
 char	*ft_append_strs(char *s1, char *s2, t_bool free_s1, t_bool free_s2);
@@ -127,8 +131,6 @@ char	*ft_append_strs(char *s1, char *s2, t_bool free_s1, t_bool free_s2);
 char	*ft_strmult_front(char *to_mult, char *back, size_t n, t_bool free_back);
 
 void	*ft_memset(void *target, int char_to_set, size_t n);
-
-void	ft_bzero(void *s, size_t n);
 
 void	*ft_calloc(size_t quantity, size_t type_size);
 

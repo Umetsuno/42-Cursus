@@ -6,11 +6,22 @@
 /*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 19:52:03 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 19:55:03 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:08:36 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+size_t	ft_putchar_fd(int fd, char c)
+{
+	write(fd, &c, 1);
+	return (1);
+}
+
+size_t	ft_putchar(char c)
+{
+	return (ft_putchar_fd(1, c));
+}
 
 void	*ft_memset(void *target, int char_to_set, size_t n)
 {
@@ -25,11 +36,6 @@ void	*ft_memset(void *target, int char_to_set, size_t n)
 		i++;
 	}
 	return (target);
-}
-
-void	ft_bzero(void *s, size_t n)
-{
-	ft_memset(s, 0, n);
 }
 
 size_t	ft_strlen(const char *str)
@@ -50,6 +56,6 @@ void	*ft_calloc(size_t quantity, size_t type_size)
 
 	if (!(result = malloc(quantity * type_size)))
 		return (NULL);
-	ft_bzero(result, quantity * type_size);
+	ft_memset(result, 0, quantity * type_size);
 	return (result);
 }
