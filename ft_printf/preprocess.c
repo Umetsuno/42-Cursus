@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf_preprocess.c                                :+:      :+:    :+:   */
+/*   preprocess.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:33:47 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 16:51:42 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:02:50 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	preprocess(
-	const char *format,
-	va_list args)
+size_t	preprocess(const char *format, va_list args)
 {
-	t_printable	formated;
+	t_formated	formated;
 	size_t		char_count;
 	size_t		index;
 
@@ -26,8 +24,8 @@ size_t	preprocess(
 	{
 		if (format[index] == '%' && format[index + 1])
 		{
-			formated = create_printable();
-			index = parse_printable(format, index + 1, &formated, args);
+			formated = create_formated_str();
+			index = parse_formated_str(format, index + 1, &formated, args);
 			char_count += process(&formated, args);
 		}
 		else

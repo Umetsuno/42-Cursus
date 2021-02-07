@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 16:39:45 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 16:52:00 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 19:58:54 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,5 +108,29 @@ size_t	parse_formated(const char *format, size_t i,
 t_bool	is_valid_type(char c);
 
 t_bool	is_valid_flag(char c);
+
+
+/*
+**		UTILS 1 & 2 FUNCTIONS
+*/
+
+size_t	ft_strlen(const char *str);
+
+size_t	ft_strcpy(const char *source, char *destination);
+
+size_t	ft_strlen(const char *str);
+
+char	*ft_strndup(const char *str, size_t n);
+
+char	*ft_append_strs(char *s1, char *s2, t_bool free_s1, t_bool free_s2);
+
+char	*ft_strmult_front(char *to_mult, char *back, size_t n, t_bool free_back);
+
+void	*ft_memset(void *target, int char_to_set, size_t n);
+
+void	ft_bzero(void *s, size_t n);
+
+void	*ft_calloc(size_t quantity, size_t type_size);
+
 
 #endif
