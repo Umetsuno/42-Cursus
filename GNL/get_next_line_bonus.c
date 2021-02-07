@@ -6,7 +6,7 @@
 /*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by lduplain          #+#    #+#             */
-/*   Updated: 2021/02/07 20:22:18 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 21:15:05 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ char	*get_second_line(char *str)
 
 int		get_next_line(int fd, char **line)
 {
-	static char	*backup[OPEN_MAX];
+	static char	*backup[256];/* OPEN_MAX for MacOS, FOPEN_MAX for ubuntu */
 	char		buffer[BUFFER_SIZE + 1];
 	int			read_result;
 
-	if ((*line = NULL) || fd < 0 || fd >= OPEN_MAX || !line 	\
+	if ((*line = NULL) || fd < 0 || fd >= 256 || !line 	\
 			|| BUFFER_SIZE < 1 || read(fd, 0, 0) == -1)
 		return (-1);
 	read_result = 1;
@@ -73,7 +73,9 @@ int		get_next_line(int fd, char **line)
 	if (read_result == 0)
 	{
 		free(backup[fd]);
-		return ((int)(backup[fd] = NULL));
+		backup[fd] = NULL;
+		return 0;
+		//return ((int)(backup[fd] = NULL)); this replaces the previous 2 lines
 	}
 	backup[fd] = get_second_line(backup[fd]);
 	return (1);

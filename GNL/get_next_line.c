@@ -6,7 +6,7 @@
 /*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/03 16:13:02 by lduplain          #+#    #+#             */
-/*   Updated: 2021/02/07 20:20:41 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 21:14:51 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,9 @@ int		get_next_line(int fd, char **line)
 	if (read_result == 0)
 	{
 		free(backup);
-		return ((int)(backup = NULL));
+		backup = NULL;
+		return 0;
+		//return ((int)(backup = NULL)); this replaces the previous 2 lines
 	}
 	backup = get_second_line(backup);
 	return (1);
