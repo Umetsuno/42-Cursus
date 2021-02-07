@@ -6,13 +6,13 @@
 /*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 19:22:26 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 20:25:19 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:31:42 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_strcpy(char *dest, char const *src)
+/* static char		*ft_strcpy(char *dest, char const *src)
 {
 	size_t i;
 
@@ -25,7 +25,7 @@ static char		*ft_strcpy(char *dest, char const *src)
 	dest[i] = src[i];
 	return (dest);
 }
-
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*concat;

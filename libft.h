@@ -6,7 +6,7 @@
 /*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:26:17 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 20:17:28 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:53:05 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,18 +119,17 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 **			MATHS
 */
 
-unsigned long long	absolute_llvalue(long long number);
+int					abs(int number);
 int					min(int a, int b, int c);
-int					ft_pgcd(int a, int b);
 
 /*
 **			GNL
 */
 
-int		get_next_line(int fd, char **line);
-int		contains(char *str, char c);
-size_t	ft_strlen(const char *s);
-size_t	ft_strcpy(char *dst, const char *src);
-char	*ft_strjoin(char const *s1, char const *s2);
+int					get_next_line(int fd, char **line);
+int					contains(char *str, char c);
+size_t				ft_strlen(const char *s);
+size_t				ft_strcpy(char *dst, const char *src);
+char				*ft_strjoin(char const *s1, char const *s2);
 
 #endif

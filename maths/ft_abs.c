@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_absolute_llvalue.c                              :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/11 14:40:57 by faherrau          #+#    #+#             */
-/*   Updated: 2021/01/18 14:03:24 by faherrau         ###   ########lyon.fr   */
+/*   Created: 2021/02/07 20:33:15 by faherrau          #+#    #+#             */
+/*   Updated: 2021/02/07 20:33:17 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <errno.h>
 #include "libft.h"
 
-unsigned long long	absolute_llvalue(long long number)
+int		ft_abs(int a)
 {
-	if (number < -18446744073709551615 || number > 18446744073709551615)
-	{
-		errno = EOVERFLOW;
-		return (0);
-	}
-	else if (number < 0)
-		return (-number);
-	else
-		return (number);
+	if (a < 0)
+		return (-a);
+	return (a);
 }

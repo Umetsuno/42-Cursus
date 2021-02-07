@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_min3.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 08:33:14 by faherrau          #+#    #+#             */
-/*   Updated: 2021/01/30 08:33:16 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 20:34:43 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,5 @@ int		min(int a, int b, int c)
 		return (a);
 	else if (b <= a && b <= c)
 		return (b);
-	else if (c <= a && c <= b)
-		return (c);
+	return (c);
 }

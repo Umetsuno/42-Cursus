@@ -6,12 +6,9 @@
 #    By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 18:15:37 by faherrau          #+#    #+#              #
-#    Updated: 2021/02/07 20:28:45 by faherrau         ###   ########lyon.fr    #
+#    Updated: 2021/02/07 20:37:13 by faherrau         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
-
-./caracter
-
 
 NAME		=	libft.a
 
@@ -60,9 +57,8 @@ SRCS        = 	./memory/ft_bzero.c \
 				./lists/ft_lstclear.c \
 				./lists/ft_lstiter.c \
 				./lists/ft_lstmap.c \
-				./maths/ft_absolute_llvalue.c \
+				./maths/ft_abs.c \
 				./maths/ft_min3.c \
-				./maths/ft_pgcd.c \
 				./GNL/get_next_line.c \
 				./GNL/get_next_line_bonus.c
 				
