@@ -6,7 +6,7 @@
 /*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:26:17 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 21:01:16 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 21:28:38 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,5 +129,12 @@ int					min(int a, int b, int c);
 */
 
 int					get_next_line(int fd, char **line);
+
+/*
+**			DISPLAY
+*/
+
+size_t				ft_putnchar(char c, size_t n);
+size_t				ft_putnchar_fd(int fd, char c, size_t n);
 
 #endif

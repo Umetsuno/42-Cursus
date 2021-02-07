@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf_is_valid_flag.c                             :+:      :+:    :+:   */
+/*   ft_putnchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/10 16:52:57 by lduplain          #+#    #+#             */
-/*   Updated: 2021/02/05 09:22:33 by faherrau         ###   ########lyon.fr   */
+/*   Created: 2021/02/07 21:28:12 by faherrau          #+#    #+#             */
+/*   Updated: 2021/02/07 21:28:13 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	is_valid_flag(char c)
+size_t	ft_putnchar(char c, size_t n)
 {
-	if (c == '-' || c == '*' || c == '.' || c == '0')
-		return (TRUE);
-	return (FALSE);
+	return (ft_putnchar_fd(1, c, n));
 }

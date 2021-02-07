@@ -6,7 +6,7 @@
 /*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 16:39:45 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 20:09:39 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 21:23:18 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	diuxx_processor(t_formated *formated, va_list args, char **to_display);
 
 void	fill_zeros(t_formated *formated, char **to_display, long value);
 
-void	pcrt_processor(t_formated *formated, va_list args, char **to_display);
+void	percent_processor(t_formated *formated, va_list args, char **to_display);
 
 size_t	preprocess(const char *format, va_list args);
 
