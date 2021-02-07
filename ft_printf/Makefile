@@ -6,14 +6,11 @@
 #    By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 18:15:37 by faherrau          #+#    #+#              #
-#    Updated: 2021/02/07 19:42:10 by faherrau         ###   ########lyon.fr    #
+#    Updated: 2021/02/07 21:35:48 by faherrau         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
-./caracter
-
-
-NAME		=	ft_printf.a
+NAME		=	libftprintf.a
 
 INCLUDES    =	-I ./
 SRCS        = 	c_process.c \
