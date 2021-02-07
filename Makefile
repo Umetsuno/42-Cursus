@@ -6,7 +6,7 @@
 #    By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 18:15:37 by faherrau          #+#    #+#              #
-#    Updated: 2021/02/07 20:37:13 by faherrau         ###   ########lyon.fr    #
+#    Updated: 2021/02/07 20:58:40 by faherrau         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRCS        = 	./memory/ft_bzero.c \
 				./strings/ft_strchr.c \
 				./strings/ft_strrchr.c \
 				./strings/ft_strncmp.c \
+				./strings/ft_strcpy.c \
 				./strings/ft_strlcpy.c \
 				./strings/ft_strlcat.c \
 				./strings/ft_strnstr.c \

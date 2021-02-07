@@ -6,7 +6,7 @@
 /*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:26:17 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 20:53:05 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 21:00:08 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ size_t				ft_strlen(const char *s);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+char				*ft_strcpy(char *dest, char const *src);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strdup(const char *s1);
@@ -127,9 +128,5 @@ int					min(int a, int b, int c);
 */
 
 int					get_next_line(int fd, char **line);
-int					contains(char *str, char c);
-size_t				ft_strlen(const char *s);
-size_t				ft_strcpy(char *dst, const char *src);
-char				*ft_strjoin(char const *s1, char const *s2);
 
 #endif
