@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf_c_processor.c                               :+:      :+:    :+:   */
+/*   c_process.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:32:52 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 16:51:42 by faherrau         ###   ########lyon.fr   */
+/*   Updated: 2021/02/07 19:38:33 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	c_processor(t_printable *formated, va_list args, char **to_print)
+size_t	c_processor(t_formated *formated, va_list args, char **to_print)
 {
 	size_t	char_count;
 	int		spaces;
