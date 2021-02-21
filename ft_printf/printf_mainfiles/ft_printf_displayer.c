@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf_display.c                                   :+:      :+:    :+:   */
+/*   ft_printf_displayer.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 15:33:41 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 16:51:42 by faherrau         ###   ########lyon.fr   */
+/*   Created: 2021/02/21 14:10:46 by faherrau          #+#    #+#             */
+/*   Updated: 2021/02/21 14:19:41 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	display(t_formated *formated, char **to_print)
+size_t		ft_printf_display(t_formated *data, char **print_me)
 {
 	int		blank;
 
-	if (formated->type == 'c')
+	if (data->type == 'c')
 		return (0);
-	blank = formated->star_value - ft_strlen(*to_print);
-	if (formated->star && blank > 0)
-		*to_print = ft_strmult_front(" ", *to_print, blank, TRUE);
-	blank = formated->minus_value - ft_strlen(*to_print);
-	if (formated->minus && blank > 0)
-		*to_print = ft_strmult_back(" ", *to_print, blank, TRUE);
-	return (ft_putstr(*to_print));
+	blank = data->star_value - ft_strlen(*print_me);
+	if (data->star == TRUE && blank > 0)
+		*print_me = ft_strmult_front(" ", *print_me, blank, TRUE);
+	blank = data->minus_value - ft_strlen(*print_me);
+	if (data->minus == TRUE && blank > 0)
+		*print_me = ft_strmult_back(" ", *print_me, blank, TRUE);
+	return (ft_putstr(*print_me));
 }

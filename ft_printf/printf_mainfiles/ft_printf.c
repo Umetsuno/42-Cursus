@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_flag.c                                       :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faherrau <faherrau@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: faherrau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/05 11:32:05 by faherrau          #+#    #+#             */
-/*   Updated: 2021/02/07 21:34:45 by faherrau         ###   ########lyon.fr   */
+/*   Created: 2021/01/13 14:50:37 by faherrau          #+#    #+#             */
+/*   Updated: 2021/02/21 17:12:40 by faherrau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_bool	is_valid_flag(char c)
+int		ft_printf(const char *format, ...)
 {
-	if (c == '-' || c == '*' || c == '.' || c == '0')
-		return (TRUE);
-	return (FALSE);
+	va_list		args;
+	size_t		char_count;
+
+	va_start(args, format);
+	char_count = preprocess(format, args);
+	va_end(args);
+	return (char_count);
 }
